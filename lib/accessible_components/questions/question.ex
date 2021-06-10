@@ -7,6 +7,7 @@ defmodule AccessibleComponents.Questions.Question do
   schema "questions" do
     field :title, :string
     field :type, :string
+    has_many :answers, AccessibleComponents.Answers.Answer
 
     timestamps()
   end
