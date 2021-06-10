@@ -7,6 +7,7 @@ defmodule AccessibleComponents.Questions.Question do
   schema "questions" do
     field :title, :string
     field :type, :string
+    has_many :answers, AccessibleComponents.Answers.Answer
 
     timestamps()
   end
@@ -15,6 +16,7 @@ defmodule AccessibleComponents.Questions.Question do
   def changeset(question, attrs) do
     question
     |> cast(attrs, [:title, :type])
+    |> cast_assoc(:answers)
     |> validate_required([:title, :type])
   end
 end

@@ -5,8 +5,11 @@ defmodule AccessibleComponents.Answers.Answer do
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "answers" do
-    field :question_id, :integer
     field :text, :string
+
+    belongs_to :question, AccessibleComponents.Questions.Question,
+      foreign_key: :question_id,
+      type: :string
 
     timestamps()
   end

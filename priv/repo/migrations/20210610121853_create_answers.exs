@@ -5,7 +5,7 @@ defmodule AccessibleComponents.Repo.Migrations.CreateAnswers do
     create table(:answers, primary_key: false) do
       add :id, :binary_id, primary_key: true
       add :text, :string
-      add :question_id, :integer
+      add :question_id, references("questions", type: :uuid)
 
       timestamps()
     end
