@@ -1,5 +1,7 @@
 # AccessibleComponents
 
+## Getting started
+
 To start your Phoenix server:
 
 - Install dependencies with `mix deps.get`
@@ -10,6 +12,12 @@ To start your Phoenix server:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+
+## Automatic A11y tests
+
+- `npm install @axe-core/cli -g`
+- `mix phx.server`
+- e.g. `axe http://localhost:4000/radio`
 
 ## Learn more
 
