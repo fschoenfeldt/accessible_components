@@ -18,6 +18,7 @@ defmodule AccessibleComponentsWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
+    live "/radio", RadioLive, :index
   end
 
   # Other scopes may use custom stacks.
@@ -37,7 +38,10 @@ defmodule AccessibleComponentsWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: AccessibleComponentsWeb.Telemetry, ecto_repos: [AccessibleComponents.Repo]
+
+      live_dashboard "/dashboard",
+        metrics: AccessibleComponentsWeb.Telemetry,
+        ecto_repos: [AccessibleComponents.Repo]
     end
   end
 end
