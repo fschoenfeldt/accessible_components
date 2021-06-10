@@ -6,5 +6,7 @@ module.exports = {
     '../lib/**/*_view.ex',
     '../lib/**/views/*.ex',
   ],
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [
+    /* require('@tailwindcss/forms'), require('@tailwindcss/typography') */
+  ],
 }
