@@ -10,6 +10,7 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
+# Radio Select
 AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
   title: "Wie haben sich die Symptome über die Zeit verändert?",
   type: "radio_select",
@@ -35,6 +36,20 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
     },
     %{
       text: "Nein"
+    }
+  ]
+})
+
+# Checkbox Select
+AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+  title: "Welche Beschwerden haben Sie?",
+  type: "multi_select",
+  answers: [
+    %{
+      text: "Rückenschmerzen"
+    },
+    %{
+      text: "Fieber"
     }
   ]
 })

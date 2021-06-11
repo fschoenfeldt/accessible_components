@@ -1,0 +1,7 @@
+<%= with input_group <- ~s(question[#{@q_id}][]),
+         input_id <- ~s(question[#{@q_id}][#{@a_id}]) do %>
+  <div class="flex flex-row items-center gap-2">
+    <input name="<%=input_group%>" type="radio" id="<%=input_id%>" value="<%=@a_id%>">
+    <label for="<%=input_id%>"><%=@text%></label>
+  </div>
+<% end %>
