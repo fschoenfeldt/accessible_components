@@ -1,10 +1,10 @@
 <section>
   <h1>Bitte füllen Sie den nachfolgenden Anamnesebogen aus:</h1>
   <form action="#" method="post">
-    <div class="space-y-2">
+    <div>
       <%= for %{ id: q_id, title: title, type: type, answers: answers } = question <- @questions do %>
-        <fieldset aria-required="true" class="p-1 border-4">
-          <legend class="text-lg font-bold"><%= title %></legend>
+        <fieldset aria-required="true">
+          <legend><%= title %></legend>
           <%= for %{ id: a_id, text: text } <- answers do %>
             <%= case type do %>
               <%= "radio_select" -> %>
@@ -12,7 +12,7 @@
               <%= "multi_select" -> %>
               <%= live_component(@socket, AnswerMultiComponent, q_id: q_id, a_id: a_id, text: text) %>
               <%= _ -> %>
-              <div class="bg-yellow-200">
+              <div>
                 Für den Antworttyp
                 <code><%= type %></code>
                 gibt es noch keine Komponente
