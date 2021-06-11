@@ -17,7 +17,7 @@ defmodule AccessibleComponentsWeb.Router do
   scope "/", AccessibleComponentsWeb do
     pipe_through :browser
 
-    live "/", PageLive, :index
+    live "/", IndexLive, :index
     live "/radio", RadioLive, :index
   end
 
