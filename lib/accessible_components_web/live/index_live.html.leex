@@ -3,8 +3,8 @@
   <form action="#" method="post">
     <div>
       <%= for %{ id: q_id, title: title, type: type, answers: answers } = question <- @questions do %>
-        <fieldset aria-required="true">
-          <legend><%= title %></legend>
+        <fieldset class="question" aria-required="true">
+          <legend class="question__title"><%= title %></legend>
           <%= for %{ id: a_id, text: text } <- answers do %>
             <%= case type do %>
               <%= "radio_select" -> %>

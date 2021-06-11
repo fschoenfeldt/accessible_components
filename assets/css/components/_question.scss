@@ -1,0 +1,14 @@
+.question {
+  &__title {
+    font-weight: bold;
+  }
+  &__answer {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    > input,
+    label {
+      padding: 0.25rem;
+    }
+  }
+}

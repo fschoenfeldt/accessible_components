@@ -1,4 +1,6 @@
-// Import components here
+@import '../node_modules/modern-normalize/modern-normalize.css';
+@import 'root';
+@import 'components';
 
 /* LiveView specific classes for your customizations */
 .phx-no-feedback.invalid-feedback,
