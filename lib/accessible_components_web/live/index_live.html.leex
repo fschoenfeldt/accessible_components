@@ -1,9 +1,10 @@
 <section>
   <h1>Bitte füllen Sie den nachfolgenden Anamnesebogen aus:</h1>
-  <form action="#" method="post">
+  <form action="" method="post">
     <%= for %{ id: q_id, title: title, type: type, answers: answers, required: required } = question <- @questions do %>
       <%= live_component(@socket, QuestionComponent, question: question) %>
     <% end %>
-    <button type="submit">Absenden</button>
+    <%# TODO: Remove my "button" role! %>
+    <button id="submit_button" type="submit">Absenden</button>
   </form>
 </section>

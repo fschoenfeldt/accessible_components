@@ -13,9 +13,12 @@ import '../css/app.scss'
 //     import socket from "./socket"
 //
 import 'phoenix_html'
+import { $ } from './utils/query_selector'
 import { Socket } from 'phoenix'
 import topbar from 'topbar'
 import { LiveSocket } from 'phoenix_live_view'
+import { checkRequiredFields } from './components/radio_button'
+$('#submit_button').addEventListener('click', checkRequiredFields)
 // import 'alpinejs'
 
 let Hooks = {}

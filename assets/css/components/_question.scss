@@ -3,7 +3,7 @@
     font-weight: bold;
   }
   &__required {
-    color: var(--warning);
+    color: var(--danger);
   }
   &__answer {
     display: flex;
@@ -13,5 +13,9 @@
     label {
       padding: 0.25rem;
     }
+  }
+  &--fillMeOut {
+    border-color: var(--danger);
+    border-width: 4px;
   }
 }

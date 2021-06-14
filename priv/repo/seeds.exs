@@ -29,6 +29,34 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
 })
 
 AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+  title: "Haben Sie übermäßig viel Kaffe getrunken?",
+  type: "radio_select",
+  required: true,
+  answers: [
+    %{
+      text: "Ja"
+    },
+    %{
+      text: "Nein"
+    }
+  ]
+})
+
+AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+  title: "Sind Herzerkrankungen bekannt in Ihrer Familie?",
+  type: "radio_select",
+  required: true,
+  answers: [
+    %{
+      text: "Ja"
+    },
+    %{
+      text: "Nein"
+    }
+  ]
+})
+
+AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
   title: "Hatten Sie an der entsprechenden Stelle eine Operation?",
   type: "radio_select",
   required: false,
@@ -43,19 +71,19 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
 })
 
 # Checkbox Select
-AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
-  title: "Welche Beschwerden haben Sie?",
-  type: "multi_select",
-  required: true,
-  answers: [
-    %{
-      text: "Rückenschmerzen"
-    },
-    %{
-      text: "Fieber"
-    }
-  ]
-})
+# AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+#   title: "Welche Beschwerden haben Sie?",
+#   type: "multi_select",
+#   required: true,
+#   answers: [
+#     %{
+#       text: "Rückenschmerzen"
+#     },
+#     %{
+#       text: "Fieber"
+#     }
+#   ]
+# })
 
 # Language Select
 # AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{

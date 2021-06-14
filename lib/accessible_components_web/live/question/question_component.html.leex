@@ -1,5 +1,5 @@
 <%= with %{ id: q_id, title: title, type: type, answers: answers, required: required } = @question do %>
-  <fieldset class="question">
+  <fieldset class="question" data-required="<%= required %>">
     <legend class="question__title">
       <span><%= title %></span>
       <%= if required do %>
