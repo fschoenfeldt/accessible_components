@@ -12,7 +12,7 @@
         </legend>
         <%= for %{ id: a_id, text: text } <- answers do %>
           <%= case type do %>
-            <%= _type when type === "radio_select" or type === "multi_select" -> %>
+            <%= "radio_select" -> %>
             <%= live_component(@socket, AnswerRadioComponent, q_id: q_id, a_id: a_id, text: text, type: type, required: required) %>
             <% _ -> %>
             <div>
