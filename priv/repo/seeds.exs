@@ -14,6 +14,7 @@
 AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
   title: "Wie haben sich die Symptome über die Zeit verändert?",
   type: "radio_select",
+  required: true,
   answers: [
     %{
       text: "Die Symptome haben sich verbessert"
@@ -30,6 +31,7 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
 AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
   title: "Hatten Sie an der entsprechenden Stelle eine Operation?",
   type: "radio_select",
+  required: false,
   answers: [
     %{
       text: "Ja"
@@ -44,6 +46,7 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
 AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
   title: "Welche Beschwerden haben Sie?",
   type: "multi_select",
+  required: true,
   answers: [
     %{
       text: "Rückenschmerzen"

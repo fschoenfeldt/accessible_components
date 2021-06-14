@@ -1,8 +1,0 @@
-<%# TODO: this component might be redundant because the only difference is the type %>
-<%= with input_group <- ~s(question[#{@q_id}][]),
-         input_id <- ~s(question[#{@q_id}][#{@a_id}]) do %>
-  <div>
-    <input name="<%=input_group%>" type="checkbox" id="<%=input_id%>" value="<%=@a_id%>">
-    <label for="<%=input_id%>"><%=@text%></label>
-  </div>
-<% end %>

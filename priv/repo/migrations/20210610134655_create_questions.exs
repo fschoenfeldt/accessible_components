@@ -6,6 +6,7 @@ defmodule AccessibleComponents.Repo.Migrations.CreateQuestions do
       add :id, :binary_id, primary_key: true
       add :title, :string
       add :type, :string
+      add :required, :boolean, default: false
 
       timestamps()
     end
