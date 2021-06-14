@@ -3,7 +3,7 @@
     font-weight: bold;
   }
   &__required {
-    color: red;
+    color: var(--warning);
   }
   &__answer {
     display: flex;
