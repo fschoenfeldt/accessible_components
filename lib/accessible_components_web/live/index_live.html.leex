@@ -6,14 +6,18 @@
         <fieldset class="question"
                   aria-required="<%= required %>"
                   aria-role="<%=type|>aria_role%>">
-          <legend class="question__title"><%= title %></legend>
+          <legend class="question__title">
+            <%= title %>
+            <%= if required do %>
+              <%# TODO: This notice isn't really friendly %>
+              <span aria-hidden="true" class="question__required">*Pflichtfrage</span>
+            <% end %>
+          </legend>
           <%= for %{ id: a_id, text: text } <- answers do %>
             <%= case type do %>
               <%= _type when type === "radio_select" or type === "multi_select" -> %>
               <%= live_component(@socket, AnswerRadioComponent, q_id: q_id, a_id: a_id, text: text, type: type, required: required) %>
-              <%#= "multi_select" -> %>
-              <%#= live_component(@socket, AnswerMultiComponent, q_id: q_id, a_id: a_id, text: text, required: required) %>
-              <%= _ -> %>
+              <% _ -> %>
               <div>
                 Für den Antworttyp
                 <code><%= type %></code>

@@ -2,6 +2,9 @@
   &__title {
     font-weight: bold;
   }
+  &__required {
+    color: red;
+  }
   &__answer {
     display: flex;
     align-items: center;
