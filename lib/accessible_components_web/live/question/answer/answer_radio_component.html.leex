@@ -1,7 +1,7 @@
 <%= with input_group <- ~s(question[#{@q_id}][]),
          input_id <- ~s(question[#{@q_id}][#{@a_id}]) do %>
   <div class="question__answer">
-    <input name="<%=input_group%>" type="<%=@type|>input_type%>" id="<%=input_id%>" value="<%=@a_id%>" required="<%= @required %>">
+    <input name="<%=input_group%>" type="<%=@type|>input_type%>" id="<%=input_id%>" value="<%=@a_id%>" required="<%= @required %>" aria-required="<%=@required%>">
     <label for="<%=input_id%>"><%=@text%></label>
   </div>
 <% end %>
