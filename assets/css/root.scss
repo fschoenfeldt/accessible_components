@@ -7,7 +7,7 @@
   --primary: #3b82f6;
   --dark: #17161b;
   --light: #ebebeb;
-  --warning: red;
+  --warning: #cc0000;
 
   // apply to variables used in components
   --text-color-dark: --dark;
@@ -32,5 +32,6 @@ body {
   :root {
     --dark: #ebebeb;
     --light: #17161b;
+    --warning: #ff0000;
   }
 }

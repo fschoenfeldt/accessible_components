@@ -24,6 +24,15 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 - `mix phx.server`
 - e.g. `axe http://localhost:4000/radio`
 
+Note that the following error occurs because of LiveView:
+
+```
+Violation of "region" with 1 occurrences!
+Ensures all page content is contained by landmarks. Correct invalid elements at:
+    - canvas
+For details, see: https://dequeuniversity.com/rules/axe/4.2/region
+```
+
 ## Learn more
 
 - Official website: https://www.phoenixframework.org/

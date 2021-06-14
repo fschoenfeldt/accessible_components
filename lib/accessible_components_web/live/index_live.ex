@@ -8,7 +8,4 @@ defmodule AccessibleComponentsWeb.IndexLive do
     socket = socket |> assign(questions: Questions.list_questions())
     {:ok, socket}
   end
-
-  defp aria_role("radio_select" = _type), do: "radiogroup"
-  defp aria_role(_ = _type), do: ""
 end

@@ -1,32 +1,29 @@
 <section>
   <h1>Bitte füllen Sie den nachfolgenden Anamnesebogen aus:</h1>
   <form action="#" method="post">
-    <div>
-      <%= for %{ id: q_id, title: title, type: type, answers: answers, required: required } = question <- @questions do %>
-        <fieldset class="question"
-                  aria-required="<%= required %>"
-                  aria-role="<%=type|>aria_role%>">
-          <legend class="question__title">
-            <%= title %>
-            <%= if required do %>
-              <%# TODO: This notice isn't really friendly %>
-              <span aria-hidden="true" class="question__required">*Pflichtfrage</span>
-            <% end %>
-          </legend>
-          <%= for %{ id: a_id, text: text } <- answers do %>
-            <%= case type do %>
-              <%= _type when type === "radio_select" or type === "multi_select" -> %>
-              <%= live_component(@socket, AnswerRadioComponent, q_id: q_id, a_id: a_id, text: text, type: type, required: required) %>
-              <% _ -> %>
-              <div>
-                Für den Antworttyp
-                <code><%= type %></code>
-                gibt es noch keine Komponente.
-              </div>
-            <% end %>
+    <%= for %{ id: q_id, title: title, type: type, answers: answers, required: required } = question <- @questions do %>
+      <fieldset class="question">
+        <legend class="question__title">
+          <span><%= title %></span>
+          <%= if required do %>
+            <%# TODO: This notice isn't really friendly %>
+            <span aria-hidden="true" class="question__required">*Pflichtfrage</span>
           <% end %>
-        </fieldset>
-      <% end %>
-    </div>
+        </legend>
+        <%= for %{ id: a_id, text: text } <- answers do %>
+          <%= case type do %>
+            <%= _type when type === "radio_select" or type === "multi_select" -> %>
+            <%= live_component(@socket, AnswerRadioComponent, q_id: q_id, a_id: a_id, text: text, type: type, required: required) %>
+            <% _ -> %>
+            <div>
+              Für den Antworttyp
+              <code><%= type %></code>
+              gibt es noch keine Komponente.
+            </div>
+          <% end %>
+        <% end %>
+      </fieldset>
+    <% end %>
+    <button type="submit">Absenden</button>
   </form>
 </section>
