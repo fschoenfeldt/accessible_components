@@ -56,3 +56,18 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
     }
   ]
 })
+
+# Language Select
+AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+  title: "Bitte wählen Sie Ihre Sprache",
+  type: "language_select",
+  required: true,
+  answers: [
+    %{
+      text: "Deutsch"
+    },
+    %{
+      text: "Englisch"
+    }
+  ]
+})
