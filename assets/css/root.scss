@@ -28,7 +28,7 @@ body {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
   :root {
     --dark: #ebebeb;
     --light: #17161b;

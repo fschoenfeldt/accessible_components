@@ -1,0 +1,13 @@
+// breakpoints
+@mixin md {
+  @media (min-width: 60rem) {
+    @content;
+  }
+}
+
+// dark mode
+@mixin dark-mode {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
