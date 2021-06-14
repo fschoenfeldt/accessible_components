@@ -1,5 +1,10 @@
 # AccessibleComponents
 
+## Requirements
+
+- Elixir/OTP
+- Postgres Database running on port 5432
+
 ## Getting started
 
 To start your Phoenix server:
