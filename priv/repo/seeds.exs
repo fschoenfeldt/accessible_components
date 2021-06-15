@@ -31,7 +31,7 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
   ]
 })
 
-# Checkbox Select
+# Complaint Select
 AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
   title: "Welche Beschwerden haben Sie?",
   type: "complaint_select",
@@ -66,6 +66,39 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
     },
     %{
       text: "Beinschmerzen"
+    }
+  ]
+})
+
+# Checkbox Select
+AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+  title: "Welche Art von Verletzung haben Sie?",
+  type: "multi_select",
+  required: true,
+  answers: [
+    %{
+      text: "Frostbrand"
+    },
+    %{
+      text: "Schnitt"
+    },
+    %{
+      text: "Prellung"
+    },
+    %{
+      text: "Chemische Verbrennung"
+    },
+    %{
+      text: "offene Wunde"
+    },
+    %{
+      text: "eitrige Wunde"
+    },
+    %{
+      text: "nässende Wunde"
+    },
+    %{
+      text: "trockene Wunde"
     }
   ]
 })
