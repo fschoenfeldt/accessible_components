@@ -10,62 +10,121 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-# Language Select
+# # Language Select
+# AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+#   title: "Bitte wählen Sie Ihre Sprache",
+#   type: "language_select",
+#   required: true,
+#   answers: [
+#     %{
+#       text: "Deutsch"
+#     },
+#     %{
+#       text: "Englisch"
+#     },
+#     %{
+#       text: "Französisch"
+#     },
+#     %{
+#       text: "Spanisch"
+#     }
+#   ]
+# })
+
+# # Complaint Select
+# AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+#   title: "Welche Beschwerden haben Sie?",
+#   type: "complaint_select",
+#   required: true,
+#   answers: [
+#     %{
+#       text: "Rückenschmerzen"
+#     },
+#     %{
+#       text: "Fieber"
+#     },
+#     %{
+#       text: "Durchfall"
+#     },
+#     %{
+#       text: "Insektenstich"
+#     },
+#     %{
+#       text: "Reagiere nicht auf Geräusche, z.B. Klingeln im Ohr oder höre Stimmen"
+#     },
+#     %{
+#       text: "Depressionen"
+#     },
+#     %{
+#       text: "Herzrasen"
+#     },
+#     %{
+#       text: "Erkältung"
+#     },
+#     %{
+#       text: "Verbrennung"
+#     },
+#     %{
+#       text: "Husten"
+#     },
+#     %{
+#       text: "Beinschmerzen"
+#     }
+#   ]
+# })
+
+# Checkbox Select
 AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
-  title: "Bitte wählen Sie Ihre Sprache",
-  type: "language_select",
+  title: "Welche Art von Verletzung haben Sie?",
+  type: "multi_select",
   required: true,
   answers: [
     %{
-      text: "Deutsch"
+      text: "Frostbrand"
     },
     %{
-      text: "Englisch"
+      text: "Schnitt"
     },
     %{
-      text: "Französisch"
+      text: "Prellung"
     },
     %{
-      text: "Spanisch"
+      text: "Chemische Verbrennung"
+    },
+    %{
+      text: "offene Wunde"
+    },
+    %{
+      text: "eitrige Wunde"
+    },
+    %{
+      text: "nässende Wunde"
+    },
+    %{
+      text: "trockene Wunde"
     }
   ]
 })
 
-# Checkbox Select
 AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
-  title: "Welche Beschwerden haben Sie?",
-  type: "complaint_select",
+  title: "Was rauchen Sie?",
+  type: "multi_select",
   required: true,
   answers: [
     %{
-      text: "Rückenschmerzen"
+      text: "Zigarren"
     },
     %{
-      text: "Fieber"
+      text: "Zigaretten"
     },
     %{
-      text: "Durchfall"
+      text: "E-Zigarette"
     },
     %{
-      text: "Insektenstich"
+      text: "Ich habe geraucht, bin nun aber Nichtraucher"
     },
     %{
-      text: "Depressionen"
-    },
-    %{
-      text: "Herzrasen"
-    },
-    %{
-      text: "Erkältung"
-    },
-    %{
-      text: "Verbrennung"
-    },
-    %{
-      text: "Husten"
-    },
-    %{
-      text: "Beinschmerzen"
+      text: "Nichts"
     }
   ]
 })
@@ -91,7 +150,6 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
 AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
   title: "Haben Sie übermäßig viel Kaffe getrunken?",
   type: "radio_select",
-  required: true,
   answers: [
     %{
       text: "Ja"
