@@ -4,7 +4,8 @@ export const checkRequiredFields = () => {
   // get all required fieldsets
   const requiredFieldsets = $$('[data-required="true"]')
 
-  requiredFieldsets.map(({ classList }) =>
+  // remove previously set --fillMeOut class
+  requiredFieldsets.forEach(({ classList }) =>
     classList.remove('question--fillMeOut')
   )
 

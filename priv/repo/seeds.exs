@@ -10,6 +10,42 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
+# Language Select
+AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+  title: "Bitte wählen Sie Ihre Sprache",
+  type: "language_select",
+  required: true,
+  answers: [
+    %{
+      text: "Deutsch"
+    },
+    %{
+      text: "Englisch"
+    },
+    %{
+      text: "Französisch"
+    },
+    %{
+      text: "Spanisch"
+    }
+  ]
+})
+
+# Checkbox Select
+AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+  title: "Welche Beschwerden haben Sie?",
+  type: "multi_select",
+  required: true,
+  answers: [
+    %{
+      text: "Rückenschmerzen"
+    },
+    %{
+      text: "Fieber"
+    }
+  ]
+})
+
 # Radio Select
 AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
   title: "Wie haben sich die Symptome über die Zeit verändert?",
@@ -69,33 +105,3 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
     }
   ]
 })
-
-# Checkbox Select
-# AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
-#   title: "Welche Beschwerden haben Sie?",
-#   type: "multi_select",
-#   required: true,
-#   answers: [
-#     %{
-#       text: "Rückenschmerzen"
-#     },
-#     %{
-#       text: "Fieber"
-#     }
-#   ]
-# })
-
-# Language Select
-# AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
-#   title: "Bitte wählen Sie Ihre Sprache",
-#   type: "language_select",
-#   required: true,
-#   answers: [
-#     %{
-#       text: "Deutsch"
-#     },
-#     %{
-#       text: "Englisch"
-#     }
-#   ]
-# })
