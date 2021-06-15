@@ -34,7 +34,7 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
 # Checkbox Select
 AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
   title: "Welche Beschwerden haben Sie?",
-  type: "multi_select",
+  type: "complaint_select",
   required: true,
   answers: [
     %{
@@ -42,6 +42,30 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
     },
     %{
       text: "Fieber"
+    },
+    %{
+      text: "Durchfall"
+    },
+    %{
+      text: "Insektenstich"
+    },
+    %{
+      text: "Depressionen"
+    },
+    %{
+      text: "Herzrasen"
+    },
+    %{
+      text: "Erkältung"
+    },
+    %{
+      text: "Verbrennung"
+    },
+    %{
+      text: "Husten"
+    },
+    %{
+      text: "Beinschmerzen"
     }
   ]
 })
