@@ -2,7 +2,7 @@
          input_id <- ~s(question[#{@q_id}][#{@a_id}]) do %>
   <div class="question__answer--radio">
     <input name="<%=input_group%>"
-           type="radio"
+           type="checkbox"
            id="<%=input_id%>" value="<%=@a_id%>"
            <%= if @required, do: "required" %>
            aria-required="<%=@required%>">
