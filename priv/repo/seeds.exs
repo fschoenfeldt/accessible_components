@@ -10,65 +10,68 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-# Language Select
-AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
-  title: "Bitte wählen Sie Ihre Sprache",
-  type: "language_select",
-  required: true,
-  answers: [
-    %{
-      text: "Deutsch"
-    },
-    %{
-      text: "Englisch"
-    },
-    %{
-      text: "Französisch"
-    },
-    %{
-      text: "Spanisch"
-    }
-  ]
-})
+# # Language Select
+# AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+#   title: "Bitte wählen Sie Ihre Sprache",
+#   type: "language_select",
+#   required: true,
+#   answers: [
+#     %{
+#       text: "Deutsch"
+#     },
+#     %{
+#       text: "Englisch"
+#     },
+#     %{
+#       text: "Französisch"
+#     },
+#     %{
+#       text: "Spanisch"
+#     }
+#   ]
+# })
 
-# Complaint Select
-AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
-  title: "Welche Beschwerden haben Sie?",
-  type: "complaint_select",
-  required: true,
-  answers: [
-    %{
-      text: "Rückenschmerzen"
-    },
-    %{
-      text: "Fieber"
-    },
-    %{
-      text: "Durchfall"
-    },
-    %{
-      text: "Insektenstich"
-    },
-    %{
-      text: "Depressionen"
-    },
-    %{
-      text: "Herzrasen"
-    },
-    %{
-      text: "Erkältung"
-    },
-    %{
-      text: "Verbrennung"
-    },
-    %{
-      text: "Husten"
-    },
-    %{
-      text: "Beinschmerzen"
-    }
-  ]
-})
+# # Complaint Select
+# AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+#   title: "Welche Beschwerden haben Sie?",
+#   type: "complaint_select",
+#   required: true,
+#   answers: [
+#     %{
+#       text: "Rückenschmerzen"
+#     },
+#     %{
+#       text: "Fieber"
+#     },
+#     %{
+#       text: "Durchfall"
+#     },
+#     %{
+#       text: "Insektenstich"
+#     },
+#     %{
+#       text: "Reagiere nicht auf Geräusche, z.B. Klingeln im Ohr oder höre Stimmen"
+#     },
+#     %{
+#       text: "Depressionen"
+#     },
+#     %{
+#       text: "Herzrasen"
+#     },
+#     %{
+#       text: "Erkältung"
+#     },
+#     %{
+#       text: "Verbrennung"
+#     },
+#     %{
+#       text: "Husten"
+#     },
+#     %{
+#       text: "Beinschmerzen"
+#     }
+#   ]
+# })
 
 # Checkbox Select
 AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
@@ -124,7 +127,6 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
 AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
   title: "Haben Sie übermäßig viel Kaffe getrunken?",
   type: "radio_select",
-  required: true,
   answers: [
     %{
       text: "Ja"
