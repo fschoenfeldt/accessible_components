@@ -1,7 +1,7 @@
 defmodule AccessibleComponentsWeb.IndexLive do
   use AccessibleComponentsWeb, :live_view
   alias AccessibleComponents.Questions
-  alias AccessibleComponentsWeb.{AnswerMultiComponent, AnswerRadioComponent}
+  alias AccessibleComponentsWeb.{QuestionComponent}
 
   @impl true
   def mount(_params, _session, socket) do

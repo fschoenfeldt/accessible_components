@@ -1,0 +1,11 @@
+// TODO: this only exists as scss for now
+button,
+input[type='button'] {
+  background-color: var(--light);
+  color: var(--dark);
+
+  @include dark-mode {
+    background-color: var(--dark);
+    color: var(--light);
+  }
+}

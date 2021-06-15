@@ -7,7 +7,7 @@
   --primary: #3b82f6;
   --dark: #17161b;
   --light: #ebebeb;
-  --warning: #cc0000;
+  --danger: #cc0000;
 
   // apply to variables used in components
   --text-color-dark: --dark;
@@ -28,10 +28,10 @@ body {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
   :root {
     --dark: #ebebeb;
     --light: #17161b;
-    --warning: #ff0000;
+    --danger: #ff0000;
   }
 }
