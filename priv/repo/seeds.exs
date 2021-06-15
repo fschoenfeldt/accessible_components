@@ -106,6 +106,29 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
   ]
 })
 
+AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+  title: "Was rauchen Sie?",
+  type: "multi_select",
+  required: true,
+  answers: [
+    %{
+      text: "Zigarren"
+    },
+    %{
+      text: "Zigaretten"
+    },
+    %{
+      text: "E-Zigarette"
+    },
+    %{
+      text: "Ich habe geraucht, bin nun aber Nichtraucher"
+    },
+    %{
+      text: "Nichts"
+    }
+  ]
+})
+
 # Radio Select
 AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
   title: "Wie haben sich die Symptome über die Zeit verändert?",
