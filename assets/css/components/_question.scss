@@ -5,7 +5,8 @@
   &__required {
     color: var(--danger);
   }
-  &__answer {
+  &__answer--radio,
+  &__answer--checkbox {
     display: flex;
     align-items: center;
     gap: 0.25rem;
