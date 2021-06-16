@@ -1,4 +1,9 @@
 defmodule AccessibleComponentsWeb.QuestionComponent do
   use AccessibleComponentsWeb, :live_component
-  alias AccessibleComponentsWeb.{AnswerRadioComponent, AnswerCheckboxComponent}
+
+  alias AccessibleComponentsWeb.{
+    AnswerRadioComponent,
+    AnswerCheckboxComponent,
+    AnswerLanguageSelectComponent
+  }
 end

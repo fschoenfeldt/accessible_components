@@ -13,6 +13,8 @@
         <%= live_component(@socket, AnswerRadioComponent, q_id: q_id, a_id: a_id, text: text, type: type, required: required) %>
         <%= "multi_select" -> %>
         <%= live_component(@socket, AnswerCheckboxComponent, q_id: q_id, a_id: a_id, text: text, type: type, required: required) %>
+        <%= "language_select" -> %>
+        <%= live_component(@socket, AnswerLanguageSelectComponent, q_id: q_id, a_id: a_id, text: text, type: type, required: required) %>
         <% _ -> %>
         <div>
           Für den Antworttyp

@@ -10,26 +10,26 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-# # Language Select
-# AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
-#   title: "Bitte wählen Sie Ihre Sprache",
-#   type: "language_select",
-#   required: true,
-#   answers: [
-#     %{
-#       text: "Deutsch"
-#     },
-#     %{
-#       text: "Englisch"
-#     },
-#     %{
-#       text: "Französisch"
-#     },
-#     %{
-#       text: "Spanisch"
-#     }
-#   ]
-# })
+# Language Select
+AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+  title: "Bitte wählen Sie Ihre Sprache",
+  type: "language_select",
+  required: true,
+  answers: [
+    %{
+      text: "Deutsch"
+    },
+    %{
+      text: "Englisch"
+    },
+    %{
+      text: "Französisch"
+    },
+    %{
+      text: "Spanisch"
+    }
+  ]
+})
 
 # # Complaint Select
 # AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
