@@ -6,8 +6,11 @@
   &__required {
     color: var(--danger);
   }
+  // TODO: split up the below into subcomponents,
+  //       remove one layer from their BEM (so 'answer' is block)
   &__answer--radio,
-  &__answer--checkbox {
+  &__answer--checkbox,
+  &__answer--language_select {
     display: flex;
     align-items: center;
     gap: 0.25rem;

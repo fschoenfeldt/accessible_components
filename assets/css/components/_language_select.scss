@@ -1,0 +1,39 @@
+/* autoprefixer grid: autoplace */
+.question--language_select {
+  .question__answers {
+    @include sm {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+    @include md {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include lg {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    gap: 1rem;
+    grid-gap: 1rem;
+    justify-items: center;
+    align-items: center;
+
+    input:focus + label {
+      border: 2px solid var(--highlight);
+      border-radius: 2px;
+    }
+  }
+}
+
+.question__answer--language_select {
+  img {
+    width: 10rem;
+    @include sm {
+      width: 6rem;
+    }
+    @include md {
+      width: 8rem;
+    }
+    @include lg {
+      width: 8rem;
+    }
+  }
+}

@@ -1,13 +1,14 @@
 <%= with input_group <- ~s(question[#{@q_id}][]),
          input_id <- ~s(question[#{@q_id}][#{@a_id}]) do %>
-  <div class="question__answer--radio">
+  <div class="question__answer--language_select">
     <input name="<%=input_group%>"
            type="radio"
            id="<%=input_id%>" value="<%=@a_id%>"
            <%= if @required, do: "required" %>
            aria-required="<%=@required%>">
     <label for="<%=input_id%>">
-      <%=@text%>
+      <img src="<%= @static_locale_path <> locale_flag(@text) %>" alt="">
+      <div><%=@text%></div>
     </label>
   </div>
 <% end %>

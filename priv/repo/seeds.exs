@@ -27,6 +27,15 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
     },
     %{
       text: "Spanisch"
+    },
+    %{
+      text: "Russisch"
+    },
+    %{
+      text: "Polnisch"
+    },
+    %{
+      text: "Arabisch"
     }
   ]
 })

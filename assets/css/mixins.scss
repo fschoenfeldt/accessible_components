@@ -1,5 +1,15 @@
 // breakpoints
+@mixin sm {
+  @media (min-width: 20rem) {
+    @content;
+  }
+}
 @mixin md {
+  @media (min-width: 40rem) {
+    @content;
+  }
+}
+@mixin lg {
   @media (min-width: 60rem) {
     @content;
   }

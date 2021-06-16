@@ -8,6 +8,7 @@
   --dark: #17161b;
   --light: #ebebeb;
   --danger: #cc0000;
+  --highlight: #5e9ed6;
 
   // apply to variables used in components
   --text-color-dark: --dark;
@@ -33,5 +34,6 @@ body {
     --dark: #ebebeb;
     --light: #17161b;
     --danger: #ff0000;
+    --highlight: orange;
   }
 }
