@@ -6,7 +6,9 @@
   // variables
   --primary: #3b82f6;
   --dark: #17161b;
+  --darkbg: #24222a;
   --light: #ebebeb;
+  --lightbg: #ffffff;
   --danger: #cc0000;
   --highlight: #5e9ed6;
 
@@ -33,6 +35,8 @@ body {
   :root {
     --dark: #ebebeb;
     --light: #17161b;
+    --darkbg: #ffffff;
+    --lightbg: #24222a;
     --danger: #ff0000;
     --highlight: orange;
   }

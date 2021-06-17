@@ -5,6 +5,7 @@ defmodule AccessibleComponentsWeb.IndexLive do
 
   @impl true
   def mount(%{"id" => id}, _session, socket) do
+    # TODO: This throws a nasty error if the question doesn't exist
     question = Questions.get_question!(id)
 
     socket =
