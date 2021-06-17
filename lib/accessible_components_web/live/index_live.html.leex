@@ -1,10 +1,7 @@
 <section>
   <h1>Bitte füllen Sie den nachfolgenden Anamnesebogen aus:</h1>
-  <form action="" method="post">
-    <%= for question <- @questions do %>
-      <%= live_component(@socket, QuestionComponent, question: question) %>
-    <% end %>
-    <%# TODO: Remove my "button" role! %>
+  <%= _f = form_for @changeset, "/question/#{@question.id}", method: "post" %>
+    <%= live_component(@socket, QuestionComponent, question: @question) %>
     <button id="submit_button" type="submit">Absenden</button>
   </form>
 </section>
