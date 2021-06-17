@@ -6,6 +6,7 @@ defmodule AccessibleComponents.Questions.Question do
   @foreign_key_type :binary_id
   schema "questions" do
     field :title, :string
+    field :description, :string
     field :type, :string
     field :required, :boolean, default: false
     has_many :answers, AccessibleComponents.Answers.Answer

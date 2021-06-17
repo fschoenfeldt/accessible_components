@@ -7,6 +7,7 @@
         <span aria-hidden="true" class="question__required">*Pflichtfrage</span>
       <% end %>
     </legend>
+    <%# //TODO: add description %>
     <div class="question__answers">
       <%= for %{ id: a_id, text: text } <- answers do %>
         <%= case type do %>

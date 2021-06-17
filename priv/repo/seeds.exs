@@ -40,6 +40,46 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
   ]
 })
 
+AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+  title: "Wünschen Sie eine Sprachausgabe?",
+  description:
+    "Die Sprachausgabe unterstützt Sie, indem Fragen und Antworten in Tonform ausgegeben werden. Sie können diese Einstellung jederzeit ändern.",
+  type: "radio_select",
+  required: true,
+  answers: [
+    %{
+      text: "Ja"
+    },
+    %{
+      text: "Nein"
+    }
+  ]
+})
+
+AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+  title: "Bitte wählen Sie den Dialekt der Sprachausgabe",
+  description: "Für Ihre Sprache stehen mehrere Dialekte für die Sprachausgabe zur Verfügung.",
+  type: "radio_select",
+  required: true,
+  answers: [
+    %{
+      text: "Arabisch (MSA)"
+    },
+    %{
+      text: "Syrisch"
+    },
+    %{
+      text: "Ägyptisch"
+    },
+    %{
+      text: "Tunesisch"
+    },
+    %{
+      text: "Marokkanisch"
+    }
+  ]
+})
+
 # # Complaint Select
 # AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
 #   title: "Welche Beschwerden haben Sie?",
