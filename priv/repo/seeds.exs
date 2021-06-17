@@ -80,47 +80,47 @@ AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
   ]
 })
 
-# # Complaint Select
-# AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
-#   title: "Welche Beschwerden haben Sie?",
-#   type: "complaint_select",
-#   required: true,
-#   answers: [
-#     %{
-#       text: "Rückenschmerzen"
-#     },
-#     %{
-#       text: "Fieber"
-#     },
-#     %{
-#       text: "Durchfall"
-#     },
-#     %{
-#       text: "Insektenstich"
-#     },
-#     %{
-#       text: "Reagiere nicht auf Geräusche, z.B. Klingeln im Ohr oder höre Stimmen"
-#     },
-#     %{
-#       text: "Depressionen"
-#     },
-#     %{
-#       text: "Herzrasen"
-#     },
-#     %{
-#       text: "Erkältung"
-#     },
-#     %{
-#       text: "Verbrennung"
-#     },
-#     %{
-#       text: "Husten"
-#     },
-#     %{
-#       text: "Beinschmerzen"
-#     }
-#   ]
-# })
+# Complaint Select
+AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{
+  title: "Welche Beschwerden haben Sie?",
+  type: "complaint_select",
+  required: true,
+  answers: [
+    %{
+      text: "Beinschmerzen"
+    },
+    %{
+      text: "Depressionen"
+    },
+    %{
+      text: "Durchfall"
+    },
+    %{
+      text: "Erkältung"
+    },
+    %{
+      text: "Fieber"
+    },
+    %{
+      text: "Herzrasen"
+    },
+    %{
+      text: "Husten"
+    },
+    %{
+      text: "Insektenstich"
+    },
+    %{
+      text: "Reagiere nicht auf Geräusche, z.B. Klingeln im Ohr oder höre Stimmen"
+    },
+    %{
+      text: "Rückenschmerzen"
+    },
+    %{
+      text: "Verbrennung"
+    }
+  ]
+})
 
 # Checkbox Select
 AccessibleComponents.Repo.insert!(%AccessibleComponents.Questions.Question{

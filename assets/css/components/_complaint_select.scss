@@ -1,0 +1,17 @@
+/* autoprefixer grid: autoplace */
+
+.question--complaint_select {
+  .question__answers {
+    @include sm {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    // using both gaps could ensure backwards compatibility
+    // https://github.com/postcss/autoprefixer/issues/1274#issuecomment-862211771
+    grid-gap: 0.5rem 1rem;
+    gap: 0.5rem 1rem;
+  }
+}

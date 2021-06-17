@@ -10,7 +10,8 @@
   //       remove one layer from their BEM (so 'answer' is block)
   &__answer--radio,
   &__answer--checkbox,
-  &__answer--language_select {
+  &__answer--language_select,
+  &__answer--complaint_select {
     display: flex;
     align-items: center;
     gap: 0.25rem;

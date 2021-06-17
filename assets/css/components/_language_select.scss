@@ -3,16 +3,18 @@
   .question__answers {
     @include sm {
       display: grid;
-      grid-template-columns: 50% 50%;
+      grid-template-columns: repeat(2, 50%);
     }
     @include md {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
     }
     @include lg {
       grid-template-columns: repeat(4, 1fr);
     }
-    gap: 1rem;
+    // using both gaps could ensure backwards compatibility
+    // https://github.com/postcss/autoprefixer/issues/1274#issuecomment-862211771
     grid-gap: 1rem;
+    gap: 1rem;
     justify-items: center;
     align-items: center;
 
