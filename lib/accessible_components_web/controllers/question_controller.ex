@@ -3,7 +3,7 @@ defmodule AccessibleComponentsWeb.QuestionController do
 
   alias AccessibleComponents.Questions
 
-  def submit_answer(conn, %{"id" => id, "question" => _question}) do
+  def submit_answer(conn, %{"id" => id}) do
     questions = Questions.list_questions()
 
     current_question_index =

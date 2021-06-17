@@ -1,0 +1,13 @@
+.question {
+  margin-bottom: 1rem;
+  &__title {
+    font-weight: bold;
+  }
+  &__required {
+    color: var(--danger);
+  }
+  &--fillMeOut {
+    border-color: var(--danger);
+    border-width: 4px;
+  }
+}

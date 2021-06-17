@@ -1,6 +1,6 @@
 <%= with input_group <- ~s(question[#{@q_id}][]),
          input_id <- ~s(question[#{@q_id}][#{@a_id}]) do %>
-  <div class="question__answer--language_select">
+  <div class="answer answer--language_select">
     <input name="<%=input_group%>"
            type="radio"
            id="<%=input_id%>" value="<%=@a_id%>"

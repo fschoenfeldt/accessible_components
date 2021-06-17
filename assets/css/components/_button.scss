@@ -3,6 +3,7 @@ button,
 input[type='button'] {
   background-color: var(--light);
   color: var(--dark);
+  padding: 0.5rem 1rem;
 
   @include dark-mode {
     background-color: var(--dark);
