@@ -1,5 +1,5 @@
 <%= with %{ id: q_id, title: title, type: type, answers: answers, required: required } = @question do %>
-  <fieldset class="question" data-required="<%= required %>">
+  <fieldset class="question question--<%=type%>" data-required="<%= required %>">
     <legend class="question__title">
       <span><%= title %></span>
       <%= if required do %>
@@ -7,19 +7,24 @@
         <span aria-hidden="true" class="question__required">*Pflichtfrage</span>
       <% end %>
     </legend>
-    <%= for %{ id: a_id, text: text } <- answers do %>
-      <%= case type do %>
-        <%= "radio_select" -> %>
-        <%= live_component(@socket, AnswerRadioComponent, q_id: q_id, a_id: a_id, text: text, type: type, required: required) %>
-        <%= "multi_select" -> %>
-        <%= live_component(@socket, AnswerCheckboxComponent, q_id: q_id, a_id: a_id, text: text, type: type, required: required) %>
-        <% _ -> %>
-        <div>
-          Für den Antworttyp
-          <code><%= type %></code>
-          gibt es noch keine Komponente.
-        </div>
+    <%# //TODO: add description %>
+    <div class="question__answers">
+      <%= for %{ id: a_id, text: text } <- answers do %>
+        <%= case type do %>
+          <%= "radio_select" -> %>
+          <%= live_component(@socket, AnswerRadioComponent, q_id: q_id, a_id: a_id, text: text, type: type, required: required) %>
+          <%= "multi_select" -> %>
+          <%= live_component(@socket, AnswerCheckboxComponent, q_id: q_id, a_id: a_id, text: text, type: type, required: required) %>
+          <%= "language_select" -> %>
+          <%= live_component(@socket, AnswerLanguageSelectComponent, q_id: q_id, a_id: a_id, text: text, type: type, required: required) %>
+          <% _ -> %>
+          <div>
+            Für den Antworttyp
+            <code><%= type %></code>
+            gibt es noch keine Komponente.
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </fieldset>
 <% end %>

@@ -33,6 +33,11 @@ Ensures all page content is contained by landmarks. Correct invalid elements at:
 For details, see: https://dequeuniversity.com/rules/axe/4.2/region
 ```
 
+## Ressources used
+
+**flag-icon-css**
+Locale flags by [flag-icon-css](https://github.com/lipis/flag-icon-css) (MIT License)
+
 ## Learn more
 
 - Official website: https://www.phoenixframework.org/

@@ -35,10 +35,11 @@ const clearAllCustomValidityMessages = possiblyMultipleElements => {
 
 /**
  * checks required fields of a form
+ * // TODO: check for compatibility (import, fat arrow function, classList, setCustomValidity)
  * @param {Event} _event
  */
 export const checkRequiredFields = _event => {
-  // clear all previous validity messages (// HACK: This is expensive as it runs thorugh all `input` elements)
+  // clear all previous validity messages
   clearAllCustomValidityMessages($$('input'))
 
   // TODO: refactor me into a question.js
@@ -61,7 +62,7 @@ export const checkRequiredFields = _event => {
   )
   // TO DO END
 
-  if (!!fieldsetsRemainingToFill.length) {
+  if (fieldsetsRemainingToFill.length) {
     // TODO: refactor me into a checkbox.js
     // get all checkboxes from required fieldsets that are yet not checked
     const checkboxesNotChecked = fieldsetsRemainingToFill.flatMap(fieldset =>

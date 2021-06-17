@@ -17,8 +17,12 @@ defmodule AccessibleComponentsWeb.Router do
   scope "/", AccessibleComponentsWeb do
     pipe_through :browser
 
+    # no id so get the first
     live "/", IndexLive, :index
-    live "/radio", RadioLive, :index
+    # get id from parameter and show specific question
+    live "/question/:id", IndexLive, :show
+
+    post "/question/:id", QuestionController, :submit_answer
   end
 
   # Other scopes may use custom stacks.
