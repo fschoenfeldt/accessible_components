@@ -5,7 +5,7 @@ import { $$, $ } from '../utils/query_selector'
  * @param {Boolean} highlight
  * @returns [HTMLElement]|HTMLElement
  */
-export const getRequiredQuestions = ({ highlight = true }) => {
+export const getRequiredQuestions = ({ highlight = false }) => {
   // get all required fieldsets
   const requiredFieldsets = $$('[data-required="true"]')
 

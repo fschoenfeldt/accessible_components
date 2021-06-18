@@ -23,6 +23,7 @@
   --text-xl: 2.25rem;
 }
 
+// Quite aggressive way to enforce colours
 html,
 body {
   background-color: var(--light);
@@ -31,6 +32,7 @@ body {
   }
 }
 
+// change colour variables for dark mode systems
 @include dark-mode {
   :root {
     --dark: #ebebeb;
