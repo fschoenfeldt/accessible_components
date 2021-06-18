@@ -3,7 +3,6 @@
 
 :root {
   //// COLORS
-  // variables
   --primary: #3b82f6;
   --dark: #17161b;
   --darkbg: #24222a;
@@ -11,10 +10,6 @@
   --lightbg: #ffffff;
   --danger: #cc0000;
   --highlight: #5e9ed6;
-
-  // apply to variables used in components
-  --text-color-dark: --dark;
-  --text-color-light: --light;
 
   //// SIZING
   --text-sm: 0.7rem;
