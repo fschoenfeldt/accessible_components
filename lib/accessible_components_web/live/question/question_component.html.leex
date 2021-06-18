@@ -8,8 +8,7 @@
     </legend>
     <%= if @question.description do %>
       <div class="question__description">
-        <img class="description__icon description__icon--white" src="/images/ui/info_white_18dp.svg" alt="Info" />
-        <img class="description__icon description__icon--black" src="/images/ui/info_black_18dp.svg" alt="Info" />
+        <span>Information: </span>
         <p>
           <%=@question.description%>
         </p>

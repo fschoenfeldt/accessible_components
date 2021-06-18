@@ -11,31 +11,26 @@
     color: var(--danger);
   }
   &__description {
-    @include sm {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
+    display: flex;
+    background-image: url('/images/ui/info_black_18dp.svg');
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    padding-left: 2rem;
 
-    .description__icon {
-      height: 1.5rem;
-      width: 1.5rem;
-      margin-bottom: -0.5rem;
-      @include sm {
-        margin-bottom: 0;
-      }
-    }
-
-    .description__icon--white {
-      display: none;
-    }
     @include dark-mode {
-      .description__icon--white {
-        display: block;
-      }
-      .description__icon--black {
-        display: none;
-      }
+      background-image: url('/images/ui/info_white_18dp.svg');
+    }
+
+    span {
+      // https://css-tricks.com/inclusively-hidden/
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
     }
   }
   &--fillMeOut {
