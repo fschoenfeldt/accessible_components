@@ -21,8 +21,8 @@ defmodule AccessibleComponentsWeb.Router do
     live "/", IndexLive, :index
     # get id from parameter and show specific question
     live "/question/:id", IndexLive, :show
-
     post "/question/:id", QuestionController, :submit_answer
+    live "/finished", GoodbyeLive, :index
   end
 
   # Other scopes may use custom stacks.
