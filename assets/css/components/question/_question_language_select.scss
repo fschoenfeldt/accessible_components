@@ -28,18 +28,3 @@
     }
   }
 }
-
-.question__answer--language_select {
-  img {
-    width: 10rem;
-    @include sm {
-      width: 6rem;
-    }
-    @include md {
-      width: 8rem;
-    }
-    @include lg {
-      width: 8rem;
-    }
-  }
-}

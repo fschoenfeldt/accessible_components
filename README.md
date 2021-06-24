@@ -38,6 +38,9 @@ For details, see: https://dequeuniversity.com/rules/axe/4.2/region
 **flag-icon-css**
 Locale flags by [flag-icon-css](https://github.com/lipis/flag-icon-css) (MIT License)
 
+**material icons**
+Material icons by [Material Icons](https://fonts.google.com/icons?selected=Material+Icons&icon.query=info)
+
 ## Learn more
 
 - Official website: https://www.phoenixframework.org/

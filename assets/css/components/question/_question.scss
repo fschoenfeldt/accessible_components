@@ -1,0 +1,40 @@
+.question {
+  background: var(--lightbg);
+  margin-bottom: 1rem;
+  &__title {
+    background: var(--lightbg);
+    padding: 0.25rem;
+    border-bottom: 0.1rem solid var(--dark);
+    font-weight: bold;
+  }
+  &__required {
+    color: var(--danger);
+  }
+  &__description {
+    display: flex;
+    background-image: url('/images/ui/info_black_18dp.svg');
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    padding-left: 2rem;
+
+    @include dark-mode {
+      background-image: url('/images/ui/info_white_18dp.svg');
+    }
+
+    span {
+      // https://css-tricks.com/inclusively-hidden/
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+  }
+  &--fillMeOut {
+    border-color: var(--danger);
+    border-width: 4px;
+  }
+}

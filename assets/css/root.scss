@@ -3,16 +3,13 @@
 
 :root {
   //// COLORS
-  // variables
   --primary: #3b82f6;
   --dark: #17161b;
+  --darkbg: #24222a;
   --light: #ebebeb;
+  --lightbg: #ffffff;
   --danger: #cc0000;
   --highlight: #5e9ed6;
-
-  // apply to variables used in components
-  --text-color-dark: --dark;
-  --text-color-light: --light;
 
   //// SIZING
   --text-sm: 0.7rem;
@@ -21,6 +18,7 @@
   --text-xl: 2.25rem;
 }
 
+// Quite aggressive way to enforce colours
 html,
 body {
   background-color: var(--light);
@@ -29,10 +27,13 @@ body {
   }
 }
 
+// change colour variables for dark mode systems
 @include dark-mode {
   :root {
     --dark: #ebebeb;
     --light: #17161b;
+    --darkbg: #ffffff;
+    --lightbg: #24222a;
     --danger: #ff0000;
     --highlight: orange;
   }

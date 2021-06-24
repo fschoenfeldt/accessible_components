@@ -3,10 +3,17 @@
     <legend class="question__title">
       <span><%= title %></span>
       <%= if required do %>
-        <%# TODO: This notice isn't really friendly %>
         <span aria-hidden="true" class="question__required">*Pflichtfrage</span>
       <% end %>
     </legend>
+    <%= if @question.description do %>
+      <div class="question__description">
+        <span>Information: </span>
+        <p>
+          <%=@question.description%>
+        </p>
+      </div>
+    <% end %>
     <%# //TODO: add description %>
     <div class="question__answers">
       <%= for %{ id: a_id, text: text } <- answers do %>

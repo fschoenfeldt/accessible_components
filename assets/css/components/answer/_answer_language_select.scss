@@ -1,0 +1,16 @@
+.answer--language_select {
+  img {
+    width: 10rem;
+    box-shadow: 0em 0em 0.2rem 0.1rem rgba(0, 0, 0, 0.2);
+
+    @include sm {
+      width: 6rem;
+    }
+    @include md {
+      width: 8rem;
+    }
+    @include lg {
+      width: 8rem;
+    }
+  }
+}
