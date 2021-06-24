@@ -22,7 +22,7 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 
 - `npm install @axe-core/cli -g`
 - `mix phx.server`
-- e.g. `axe http://localhost:4000/radio`
+- `axe http://localhost:4000/list`
 
 Note that the following error occurs because of LiveView:
 
